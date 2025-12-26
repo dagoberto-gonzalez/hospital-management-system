@@ -1,0 +1,2 @@
+1;Francisco;45;Pulmonias;20;0987654321;Lunes a Sabado de 8 am - 10pm
+7;Dagoberto González;7;7;7;7;77

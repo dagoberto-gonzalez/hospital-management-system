@@ -1,0 +1,2 @@
+2;Jose;18;danijo630@gmail.com;A+;Pulmonia;Nada;78;175
+3;Andres Manuel Fernandez;23;andres@gmail.com;O+;Deabetes;Amoxicilina;83.0;1.86

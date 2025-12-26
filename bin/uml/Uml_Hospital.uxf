@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>0</y>
+      <w>115</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Persona
+--
+- id: String
+- nombre: String
+- edad: int
+- correo: String
+--
++ Persona()
++ Persona(String, String, int, String)
++ getId(): String
++ setId(String): void
++ getNombre(): String
++ setNombre(String): void
++ getEdad(): int
++ setEdad(int): void
++ getCorreo(): String
++ setCorreo(String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>445</x>
+      <y>165</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Doctor
+--
+- especialidad: String
+- añosExperiencia: int
+- codigoMedico: String
+- horarioAtencion: String
+--
++ Doctor()
++ Doctor(String, String, int, String, String, int, String, String)
++ getEspecialidad(): String
++ setEspecialidad(String): void
++ getAñosExperiencia(): int
++ setAñosExperiencia(int): void
++ getCodigoMedico(): String
++ setCodigoMedico(String): void
++ getHorarioAtencion(): String
++ setHorarioAtencion(String): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>655</x>
+      <y>165</y>
+      <w>235</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Paciente
+--
+- tipoSangre: String
+- padecimiento: String
+- alergias: String
+- peso: double
+- altura: double
+--
++ Paciente()
++ Paciente(String, String, int, String, String, String, String, double, double)
++ getTipoSangre(): String
++ setTipoSangre(String): void
++ getPadecimiento(): String
++ setPadecimiento(String): void
++ getAlergias(): String
++ setAlergias(String): void
++ getPeso(): double
++ setPeso(double): void
++ getAltura(): double
++ setAltura(double): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>675</x>
+      <y>360</y>
+      <w>215</w>
+      <h>215</h>
+    </coordinates>
+    <panel_attributes>Tratamiento
+--
+- idTratamiento: String
+- medicamento: String
+- dosis: String
+- duracion: String
+- instrucciones: String
+- paciente: Paciente
+- doctor: Doctor
+--
++ Tratamiento()
++ Tratamiento(String, String, String, String, String, Paciente, Doctor)
++ getIdTratamiento(): String
++ setIdTratamiento(String): void
++ getMedicamento(): String
++ setMedicamento(String): void
++ getDosis(): String
++ setDosis(String): void
++ getDuracion(): String
++ setDuracion(String): void
++ getInstrucciones(): String
++ setInstrucciones(String): void
++ getPaciente(): Paciente
++ setPaciente(Paciente): void
++ getDoctor(): Doctor
++ setDoctor(Doctor): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>360</y>
+      <w>165</w>
+      <h>185</h>
+    </coordinates>
+    <panel_attributes>Cita
+--
+- idCita: String
+- fecha: Date
+- hora: String
+- motivo: String
+- paciente: Paciente
+- doctor: Doctor
+--
++ Cita()
++ Cita(String, Date, String, String, Paciente, Doctor)
++ getIdCita(): String
++ setIdCita(String): void
++ getFecha(): Date
++ setFecha(Date): void
++ getHora(): String
++ setHora(String): void
++ getMotivo(): String
++ setMotivo(String): void
++ getPaciente(): Paciente
++ setPaciente(Paciente): void
++ getDoctor(): Doctor
++ setDoctor(Doctor): void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>535</x>
+      <y>125</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>125</y>
+      <w>105</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>300</y>
+      <w>25</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>320</y>
+      <w>85</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>300</y>
+      <w>90</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>320</y>
+      <w>25</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;80.0</additional_attributes>
+  </element>
+</diagram>
